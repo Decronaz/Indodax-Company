@@ -1,9 +1,15 @@
 import { FaPaperPlane } from "react-icons/fa";
 import QRcode from "/QRCode.png";
+import { motion } from "framer-motion";
 
 export const Starter = () => {
   return (
-    <div className="relative flex h-[598px] w-full flex-col items-center justify-center gap-10">
+    <motion.div
+      className="relative flex h-[598px] w-full flex-col items-center justify-center gap-10"
+      initial={{ scale: 1.3, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.75 }}
+    >
       <p className="w-10/12 text-left text-3xl font-black sm:text-center sm:text-4xl md:text-5xl lg:text-7xl">
         The Biggest
         <span className="text-[#1685b5]"> Crypto Marketplace</span> In Indonesia
@@ -22,6 +28,6 @@ export const Starter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
