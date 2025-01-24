@@ -13,24 +13,22 @@ export const Header = () => {
       <a href="/">
         <img className="w-44 cursor-pointer" src={Logo} />
       </a>
-      <ul className="absolute left-1/2 hidden -translate-x-1/2 gap-10 font-medium lg:flex">
+      <div className="absolute left-1/2 hidden -translate-x-1/2 gap-10 font-medium lg:flex">
         {["About", "Market", "News", "Contacts"].map((title) => (
-          <li
+          <a
             className="group relative flex cursor-pointer flex-col overflow-clip hover:underline"
             key={title}
+            href={title}
           >
             <span className="absolute -translate-y-0 transition-all duration-500 group-hover:-translate-y-[200%]">
               {title}
             </span>
-            <a
-              href={title}
-              className="relative translate-y-[200%] transition-all duration-500 group-hover:-translate-y-0"
-            >
+            <span className="absolute -translate-y-0 transition-all duration-500 group-hover:-translate-y-[200%]">
               {title}
-            </a>
-          </li>
+            </span>
+          </a>
         ))}
-      </ul>
+      </div>
       <div className="flex items-center gap-6">
         <p className="group relative hidden cursor-pointer items-center justify-center overflow-hidden rounded-md border-2 border-[#1685b5] bg-[#1685b5] px-4 py-2 text-white shadow transition-all duration-300 hover:scale-105 sm:flex">
           <span className="absolute aspect-square w-[0%] rounded-full bg-white transition-all duration-300 group-hover:w-[120%]"></span>
