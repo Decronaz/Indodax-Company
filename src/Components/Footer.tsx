@@ -65,7 +65,7 @@ export const Footer = () => {
                   ?.items.map((item) => (
                     <p
                       key={item}
-                      className="group relative flex cursor-pointer flex-col overflow-clip hover:underline"
+                      className="group w-fit relative flex cursor-pointer flex-col overflow-clip hover:underline"
                     >
                       <span className="absolute -translate-y-0 transition-all duration-500 group-hover:-translate-y-[200%]">
                         {item}
