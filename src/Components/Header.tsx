@@ -23,7 +23,7 @@ export const Header = () => {
             <span className="absolute -translate-y-0 transition-all duration-500 group-hover:-translate-y-[200%]">
               {title}
             </span>
-            <span className="absolute -translate-y-0 transition-all duration-500 group-hover:-translate-y-[200%]">
+            <span className="relative translate-y-[200%] transition-all duration-500 group-hover:-translate-y-0">
               {title}
             </span>
           </a>
