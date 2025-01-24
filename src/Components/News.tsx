@@ -23,22 +23,20 @@ export const News = () => {
             View More <FaArrowRight />
           </motion.p>
         </div>
-        <motion.div
-          className="flex flex-col gap-10 sm:flex-row"
-          initial={{ scale: 0.75, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ ease: "easeInOut", duration: 1 }}
-        >
+        <div className="flex flex-col gap-10 sm:flex-row">
           {Array.from({ length: 3 }).map((_, i) => (
-            <div
+            <motion.div
               className="flex aspect-square flex-1 cursor-pointer flex-col gap-3 overflow-clip rounded-md border border-neutral-200 bg-neutral-100 shadow-[0_-20px_14px_-18px_#00000010,_0_20px_14px_-18px_#00000010,_20px_0_14px_-18px_#00000010,_-20px_0_14px_-18px_#00000010] transition-transform duration-300 hover:scale-105"
               key={i}
+              initial={{ scale: 0.75, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ ease: "easeInOut", duration: 1 }}
             >
               <p className="h-3/4 w-full bg-neutral-200"></p>
               <p className="px-5 text-sm">...</p>
-            </div>
+            </  motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
